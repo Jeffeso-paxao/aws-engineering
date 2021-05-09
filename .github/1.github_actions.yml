@@ -1,0 +1,26 @@
+name: Deploy Bucket
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu_latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-verion: '3.9'
+      - name: Install Requirements
+        run: pip install -r requirements.txt
+      - name: Deploy 
+        env:
+          AWS_ACCESS_KEY_ID:
+          SECRET_ACCESS_KEY:
+          AWS_DEFAULT_REGION:
+        run: |
+        python Aula02/github_actions/deploy.py
+           

@@ -1,0 +1,20 @@
+Description: Cria bucket no S3
+Resources:
+  BucketJeffS3:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: bucket-jeff-eng
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+
+  Bucket2JeffS3:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: segundo-bucket-jeff-eng

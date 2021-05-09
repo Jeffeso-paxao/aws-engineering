@@ -1,0 +1,14 @@
+{
+    "Name": "Jefferson Lima",
+    "Country":"Brasil",
+    "Sports": [
+        "Vollyball",
+        "Basketball",
+        "Hiking"
+    ],
+    "Adress":{
+        "Street": "Rua Francisco de Assis Sabino",
+        "Number":"00"
+        
+    }
+}
